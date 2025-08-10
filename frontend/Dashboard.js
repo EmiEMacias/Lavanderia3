@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet, ActivityIndicator, ScrollView
 import axios from 'axios';
 import { useNavigation } from '@react-navigation/native';
 import OrderTable from './components/orderTable';
+import SubMenu from './components/SubMenu';
 
 export default function Dashboard() {
   const navigation = useNavigation();
@@ -55,27 +56,29 @@ export default function Dashboard() {
 
   return (
     <ScrollView style={styles.container}>
+      <SubMenu navigation={navigation} />
+
       <Text style={styles.title}>Lavandería</Text>
 
       {/* Conteo por unidad */}
       <View style={styles.card}>
         <Text style={styles.subtitle}>Conteo por unidad</Text>
         <View style={styles.row}>
-          <TouchableOpacity style={styles.col} onPress={() => navigation.navigate("garments")}>
+          <TouchableOpacity style={styles.col} onPress={() => navigation.navigate("Prendas")}>
             <Text>Número Prendas</Text>
             <Text>{counting?.quantity_garments}</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.col} onPress={() => navigation.navigate("services")}>
+          <TouchableOpacity style={styles.col} onPress={() => navigation.navigate("Servicios")}>
             <Text>Número de Servicio</Text>
             <Text>{counting?.quantity_services}</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.row}>
-          <TouchableOpacity style={styles.col} onPress={() => navigation.navigate("clients")}>
+          <TouchableOpacity style={styles.col} onPress={() => navigation.navigate("Clientes")}>
             <Text>Número de Clientes</Text>
             <Text>{counting?.quantity_clients}</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.col} onPress={() => navigation.navigate("users")}>
+          <TouchableOpacity style={styles.col} onPress={() => navigation.navigate("Usuarios")}>
             <Text>Número de Usuarios</Text>
             <Text>{counting?.quantity_users}</Text>
           </TouchableOpacity>
@@ -83,14 +86,14 @@ export default function Dashboard() {
       </View>
 
       {/* Botón crear orden */}
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("./orders/create_order")}>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("CreateOrder")}>
         <Text style={styles.buttonText}>Crear Orden</Text>
       </TouchableOpacity>
 
       {/* Listados */}
       <View style={styles.card}>
         <Text style={styles.subtitle}>Listado de órdenes</Text>
-        <OrderTable orders={orders} />
+        <OrderTable orders={order} />
       </View>
 
       <View style={styles.card}>

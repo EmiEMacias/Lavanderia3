@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, TouchableOpacity, FlatList, Modal, Alert, StyleSheet, ActivityIndicator } from 'react-native';
 import axios from 'axios';
 import { useNavigation } from '@react-navigation/native';
-import EditService from './EditService'; // Componente que tú tengas en RN
+import EditService from './edit_service'; // Componente que tú tengas en RN
 
 export default function ListService() {
   const [services, setServices] = useState([]);

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { View, Text, TextInput, Button, FlatList, Alert, Modal, TouchableOpacity, StyleSheet } from "react-native";
 import axios from "axios";
 import { useNavigation } from "@react-navigation/native";
-import EditClient from "./EditClient"; // Lo adaptaremos también a RN
+import EditClient from "./edit_client"; // Lo adaptaremos también a RN
 
 export default function ListClient() {
   const [clients, setClients] = useState([]);

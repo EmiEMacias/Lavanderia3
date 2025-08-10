@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
+import SubMenu from '../components/SubMenu'; // Ajusta la ruta según la ubicación
 
-export default function OrderTable({ orders }) {
+export default function OrderTable({ orders, navigation }) {
   const renderHeader = () => (
     <View style={[styles.row, styles.header]}>
       <Text style={styles.cell}>#</Text>
@@ -26,6 +27,7 @@ export default function OrderTable({ orders }) {
 
   return (
     <View style={styles.container}>
+      <SubMenu navigation={navigation} />
       {renderHeader()}
       <FlatList
         data={orders}

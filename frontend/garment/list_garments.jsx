@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, TouchableOpacity, FlatList, Modal, Alert, ActivityIndicator, StyleSheet } from 'react-native';
 import axios from 'axios';
 import { useNavigation } from '@react-navigation/native';
-import Edit from './Edit'; // Adaptar también este a React Native
+import Edit from './edit_garment'; // Adaptar también este a React Native
 
 export default function List() {
   const [garments, setGarments] = useState([]);
