@@ -8,10 +8,11 @@ def create_client(name, phone_number, address):
     return new_client
 
 def search_client_by_name(name):
-    return Client.query.filter(Client.name.ilike(f"%{name}%")).all()
+    client = Client.query.filter(Client.name.ilike(f"%{name}%")).all() #LIKE - Busca un cliente como este nombre
+    return client
 
 def search_client_by_phone(phone):
-    return Client.query.filter(Client.phone_number.ilike(f"%{phone}%")).all()
+    return Client.query.filter(Client.phone_number.ilike(f"%{phone}%")).first()
 
 def search_clients():
     return Client.query.filter().all()
@@ -20,12 +21,11 @@ def update_client(client_id, updated_data):
     client = Client.query.get(client_id)
     if not client:
         return None
-
+    
     for key, value in updated_data.items():
         setattr(client, key, value)
     db.session.commit()
     return client
-
 
 def delete_client(client_id):
     client = Client.query.get(client_id)

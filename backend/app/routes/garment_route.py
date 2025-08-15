@@ -5,7 +5,7 @@ garment_bp = Blueprint("garment_bp", __name__, url_prefix="/garments")
 @garment_bp.route("/create", methods=["POST"])
 def create():
     data = request.json
-    garment = create_garment(data["name"], data["description"])
+    garment = create_garment(data["type"], data["description"])
     return jsonify({"msg":"Prenda Creada con exito", "garment_id":garment.id}),200
 
 @garment_bp.route("/update/<int:garment_id>", methods=["PUT"])
