@@ -43,7 +43,7 @@ export const EditClient = ({ client, reload, close }) => {
         value={data.name}
         onChangeText={(text) => onChange('name', text)}
         placeholder="Nombre completo"
-        placeholderTextColor="#b377aa"
+        placeholderTextColor="#b3b3ff"
       />
 
       <Text style={styles.label}>Número telefónico:</Text>
@@ -53,7 +53,7 @@ export const EditClient = ({ client, reload, close }) => {
         onChangeText={(text) => onChange('phone_number', text)}
         keyboardType="phone-pad"
         placeholder="Ej. 555-123-4567"
-        placeholderTextColor="#b377aa"
+        placeholderTextColor="#b3b3ff"
       />
 
       <Text style={styles.label}>Dirección:</Text>
@@ -62,11 +62,11 @@ export const EditClient = ({ client, reload, close }) => {
         value={data.address}
         onChangeText={(text) => onChange('address', text)}
         placeholder="Dirección completa"
-        placeholderTextColor="#b377aa"
+        placeholderTextColor="#b3b3ff"
       />
 
       {loading ? (
-        <ActivityIndicator size="large" color="#d6336c" style={{ marginTop: 20 }} />
+        <ActivityIndicator size="large" color="#5e60ce" style={{ marginTop: 20 }} />
       ) : (
         <TouchableOpacity style={styles.btn} onPress={submit}>
           <Text style={styles.btnText}>Actualizar</Text>
@@ -80,36 +80,36 @@ const styles = StyleSheet.create({
   container: { 
     flex: 1, 
     padding: 20, 
-    backgroundColor: '#fff0f6'
+    backgroundColor: '#f0f4ff' // Fondo azul muy claro
   },
   title: {
     fontSize: 26,
     fontWeight: 'bold',
     marginBottom: 20,
     textAlign: 'center',
-    color: '#a83263',
+    color: '#4e3ca9', // Morado intenso
   },
   label: {
     fontWeight: '600',
-    color: '#6e1843',
+    color: '#3d2f91',
     marginTop: 10,
     marginBottom: 5,
   },
   input: {
     borderWidth: 1,
-    borderColor: '#eaa4c7',
+    borderColor: '#8d84f2', // Lila claro
     borderRadius: 8,
     padding: 12,
     marginBottom: 15,
-    backgroundColor: '#fff5f9',
-    color: '#5a1a3b',
+    backgroundColor: '#ffffff',
+    color: '#2d2675', // Texto morado oscuro
   },
   btn: {
-    backgroundColor: '#d6336c',
+    backgroundColor: '#5e60ce', // Azul/morado
     paddingVertical: 15,
     borderRadius: 15,
     marginTop: 20,
-    shadowColor: '#a83263',
+    shadowColor: '#3d2f91',
     shadowOffset: { width: 0, height: 5 },
     shadowOpacity: 0.4,
     shadowRadius: 7,

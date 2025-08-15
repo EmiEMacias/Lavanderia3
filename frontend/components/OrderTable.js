@@ -1,8 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 
-
-export default function OrderTable ({ orders })  {
+export default function OrderTable({ orders }) {
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     if (isNaN(date)) return dateString;
@@ -40,22 +39,22 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     borderBottomWidth: 1,
-    borderColor: '#f7c1d9', // rosa suave
+    borderColor: '#b3b3ff', // lila suave
     paddingVertical: 10,
   },
   header: {
-    backgroundColor: '#fce4ec', // rosa pastel clarito
+    backgroundColor: '#e0e0ff', // azul pastel clarito
   },
   cell: {
     textAlign: 'center',
     paddingHorizontal: 10,
-    color: '#a83263', // rosa oscuro suave
+    color: '#4e3ca9', // morado oscuro
   },
   headerCell: {
     textAlign: 'center',
     fontWeight: 'bold',
     paddingHorizontal: 10,
-    color: '#d6336c', // rosa fuerte
+    color: '#5e60ce', // azul-morado fuerte
   },
   cellNumber: {
     width: 30,

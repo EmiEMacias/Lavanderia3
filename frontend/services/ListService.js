@@ -127,19 +127,19 @@ export default function ListService  ({ navigation })  {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff0f6',
+    backgroundColor: '#E0E0FF', // azul muy suave
     paddingHorizontal: 15,
     paddingTop: 20,
   },
   title: {
     fontSize: 24,
-    color: '#d6336c',
+    color: '#5E60CE', // morado principal
     fontWeight: 'bold',
     marginBottom: 15,
     textAlign: 'center',
   },
   createButton: {
-    backgroundColor: '#d6336c',
+    backgroundColor: '#5E60CE', // morado
     padding: 12,
     borderRadius: 10,
     marginBottom: 15,
@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   itemContainer: {
-    backgroundColor: '#ffe5f0',
+    backgroundColor: '#DDE0FF', // azul claro
     padding: 15,
     borderRadius: 10,
     marginBottom: 12,
@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
   },
   itemIndex: {
     fontWeight: 'bold',
-    color: '#6f084e',
+    color: '#3B3CA9', // azul más oscuro
     marginRight: 10,
     fontSize: 16,
   },
@@ -169,14 +169,14 @@ const styles = StyleSheet.create({
   itemName: {
     fontWeight: 'bold',
     fontSize: 18,
-    color: '#b43b68',
+    color: '#4E3CA9', // morado oscuro
   },
   itemDesc: {
-    color: '#6f084e',
+    color: '#3B3CA9',
     marginVertical: 3,
   },
   itemPrice: {
-    color: '#d6336c',
+    color: '#306CF8', // azul fuerte
     fontWeight: 'bold',
   },
   buttons: {
@@ -189,13 +189,13 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   editButton: {
-    backgroundColor: '#f783ac',
+    backgroundColor: '#7C7CFF', // azul-morado
   },
   deleteButton: {
-    backgroundColor: '#d6336c',
+    backgroundColor: '#5E60CE', // morado
   },
   buttonText: {
     color: 'white',
     fontWeight: 'bold',
   },
-})
+});

@@ -275,73 +275,92 @@ export default function CreateOrder  ()  {
 };
 
 const styles = StyleSheet.create({
-  container: { padding: 20, backgroundColor: '#fff0f6', flex: 1 },
+  container: { 
+    padding: 20, 
+    backgroundColor: '#E0E0FF', // azul muy suave
+    flex: 1 
+  },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
     textAlign: 'center',
-    color: '#d6336c',
+    color: '#5E60CE', // morado
   },
   button: {
-    backgroundColor: '#e83e8c', // rosa fuerte
+    backgroundColor: '#5E60CE', // morado
     padding: 10,
     borderRadius: 6,
     marginBottom: 20,
     alignItems: 'center',
   },
-  buttonText: { color: 'white', fontWeight: 'bold' },
-  label: { marginBottom: 5, color: '#a52a63' },
+  buttonText: { 
+    color: 'white', 
+    fontWeight: 'bold' 
+  },
+  label: { 
+    marginBottom: 5, 
+    color: '#4E3CA9' 
+  },
   input: {
     borderWidth: 1,
-    borderColor: '#d6336c',
+    borderColor: '#5E60CE',
     borderRadius: 6,
     paddingHorizontal: 8,
     paddingVertical: 6,
     marginBottom: 10,
-    backgroundColor: '#fff0f6',
-    color: '#6f0421',
+    backgroundColor: '#F0F0FF', // azul clarito
+    color: '#002B75',
   },
   garmentContainer: {
     marginBottom: 20,
     padding: 15,
     borderWidth: 1,
-    borderColor: '#f3a6c4',
+    borderColor: '#A3A0FF',
     borderRadius: 10,
-    backgroundColor: '#ffe6f0',
+    backgroundColor: '#DDE0FF', // azul suave
   },
   deleteGarmentBtn: {
-    backgroundColor: '#d6336c',
+    backgroundColor: '#5E60CE',
     padding: 6,
     borderRadius: 6,
     alignSelf: 'flex-end',
     marginBottom: 10,
   },
-  subtitle: { fontSize: 18, fontWeight: 'bold', marginBottom: 10, color: '#9f224e' },
+  subtitle: { 
+    fontSize: 18, 
+    fontWeight: 'bold', 
+    marginBottom: 10, 
+    color: '#4E3CA9' 
+  },
   garmentType: {
     paddingVertical: 6,
     paddingHorizontal: 12,
     borderWidth: 1,
-    borderColor: '#c77d9b',
+    borderColor: '#7C7CFF',
     borderRadius: 20,
     marginRight: 10,
-    backgroundColor: '#ffe6f0',
+    backgroundColor: '#DDE0FF',
   },
   garmentTypeSelected: {
-    backgroundColor: '#d6336c',
+    backgroundColor: '#5E60CE',
   },
-  garmentTypeText: { color: '#9f224e' },
-  garmentTypeTextSelected: { color: 'white' },
+  garmentTypeText: { 
+    color: '#4E3CA9' 
+  },
+  garmentTypeTextSelected: { 
+    color: 'white' 
+  },
   serviceContainer: {
     marginBottom: 15,
     padding: 10,
     borderWidth: 1,
-    borderColor: '#f0a6c2',
+    borderColor: '#B1B9FF',
     borderRadius: 10,
-    backgroundColor: '#ffe6f0',
+    backgroundColor: '#E6E8FF',
   },
   deleteServiceBtn: {
-    backgroundColor: '#d6336c',
+    backgroundColor: '#5E60CE',
     padding: 4,
     borderRadius: 20,
     alignSelf: 'flex-end',
@@ -355,18 +374,22 @@ const styles = StyleSheet.create({
     paddingVertical: 4,
     paddingHorizontal: 10,
     borderWidth: 1,
-    borderColor: '#c77d9b',
+    borderColor: '#7C7CFF',
     borderRadius: 20,
     marginRight: 10,
-    backgroundColor: '#ffe6f0',
+    backgroundColor: '#DDE0FF',
   },
   serviceNameSelected: {
-    backgroundColor: '#e83e8c',
+    backgroundColor: '#5E60CE',
   },
-  serviceNameText: { color: '#9f224e' },
-  serviceNameTextSelected: { color: 'white' },
+  serviceNameText: { 
+    color: '#4E3CA9' 
+  },
+  serviceNameTextSelected: { 
+    color: 'white' 
+  },
   addServiceBtn: {
-    backgroundColor: '#e83e8c',
+    backgroundColor: '#5E60CE',
     padding: 8,
     borderRadius: 6,
     alignItems: 'center',
@@ -376,10 +399,10 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginVertical: 20,
     textAlign: 'center',
-    color: '#d6336c',
+    color: '#5E60CE',
   },
   saveBtn: {
-    backgroundColor: '#d6336c',
+    backgroundColor: '#5E60CE',
     padding: 15,
     borderRadius: 8,
     alignItems: 'center',

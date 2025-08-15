@@ -65,33 +65,33 @@ export default function EditService  ({ service, reload, close }) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#fff0f6',
+    backgroundColor: '#E0E0FF', // azul muy suave
     padding: 20,
     borderRadius: 10,
   },
   title: {
     fontSize: 22,
     fontWeight: 'bold',
-    color: '#d6336c',
+    color: '#5E60CE', // morado
     marginBottom: 15,
     textAlign: 'center',
   },
   label: {
-    color: '#b43b68',
+    color: '#4E3CA9', // morado más oscuro
     marginBottom: 5,
     fontWeight: '600',
   },
   input: {
     borderWidth: 1,
-    borderColor: '#f783ac',
-    backgroundColor: '#ffe5f0',
+    borderColor: '#7C7CFF', // azul-morado
+    backgroundColor: '#DDE0FF', // azul claro
     padding: 10,
     borderRadius: 8,
     marginBottom: 15,
-    color: '#6f084e',
+    color: '#002B75', // azul oscuro
   },
   button: {
-    backgroundColor: '#d6336c',
+    backgroundColor: '#5E60CE', // morado principal
     padding: 15,
     borderRadius: 10,
     alignItems: 'center',
@@ -100,4 +100,4 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: 'bold',
   },
-})
+});

@@ -130,29 +130,29 @@ export default function EditUser  ({ user, reload, close })  {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff0f6',
+    backgroundColor: '#E0E0FF', // azul suave
     padding: 20,
   },
   title: {
     fontSize: 26,
     fontWeight: 'bold',
-    color: '#d6336c',
+    color: '#5E60CE', // morado principal
     marginBottom: 30,
     textAlign: 'center',
   },
   label: {
     fontWeight: '600',
-    color: '#b43b68',
+    color: '#4E3CA9', // morado oscuro
     marginBottom: 8,
   },
   input: {
     borderWidth: 1,
-    borderColor: '#f783ac',
-    backgroundColor: '#ffe5f0',
+    borderColor: '#7C7CFF', // azul-morado
+    backgroundColor: '#DDE0FF', // azul claro
     borderRadius: 8,
     paddingHorizontal: 12,
     paddingVertical: 10,
-    color: '#6f084e',
+    color: '#3B3CA9', // azul oscuro
     marginBottom: 20,
   },
   rolContainer: {
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
   rolOption: {
     flex: 1,
     borderWidth: 1,
-    borderColor: '#f783ac',
+    borderColor: '#7C7CFF',
     backgroundColor: '#fff',
     borderRadius: 8,
     paddingVertical: 12,
@@ -170,10 +170,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   rolOptionSelected: {
-    backgroundColor: '#d6336c',
+    backgroundColor: '#5E60CE',
   },
   rolText: {
-    color: '#b43b68',
+    color: '#4E3CA9',
     fontWeight: '600',
   },
   rolTextSelected: {
@@ -186,7 +186,7 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
   button: {
-    backgroundColor: '#d6336c',
+    backgroundColor: '#5E60CE',
     paddingVertical: 15,
     borderRadius: 10,
     alignItems: 'center',
@@ -201,8 +201,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   backButtonText: {
-    color: '#d6336c',
+    color: '#5E60CE',
     fontWeight: '600',
     fontSize: 16,
   },
-})
+});

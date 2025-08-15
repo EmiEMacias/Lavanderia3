@@ -114,15 +114,20 @@ export default function ListGarmentsView  ()  {
 
 
 const styles = StyleSheet.create({
-  container: { padding: 20, flex: 1, marginTop: 40, backgroundColor: '#ffcde1ff' },
+  container: { 
+    padding: 20, 
+    flex: 1, 
+    marginTop: 40, 
+    backgroundColor: '#e0e0ff' 
+  },
   item: {
     marginBottom: 15,
     padding: 15,
     borderWidth: 1,
-    borderColor: '#eaa4c7',
+    borderColor: '#a3a0ff',
     borderRadius: 12,
-    backgroundColor: '#fff5f9',
-    shadowColor: '#d6336c',
+    backgroundColor: '#f0f0ff',
+    shadowColor: '#5e60ce',
     shadowOffset: { width: 0, height: 3 },
     shadowOpacity: 0.3,
     shadowRadius: 6,
@@ -130,7 +135,7 @@ const styles = StyleSheet.create({
   },
   itemText: {
     marginBottom: 8,
-    color: '#5a1a3b',
+    color: '#4e3ca9',
     fontWeight: '500',
   },
   buttons: {
@@ -146,25 +151,26 @@ const styles = StyleSheet.create({
     marginHorizontal: 5,
   },
   editBtn: {
-    backgroundColor: '#d6336c',
+    backgroundColor: '#5e60ce',
   },
   deleteBtn: {
-    backgroundColor: '#f44336',
+    backgroundColor: '#6c63ff',
   },
   btnText: {
-    color: 'white',
+    color: '#fff',
     fontWeight: '700',
   },
   createBtn: {
-    backgroundColor: '#e83e8c',
+    backgroundColor: '#5e60ce',
     paddingVertical: 16,
     borderRadius: 14,
     alignItems: 'center',
-    shadowColor: '#a83263',
+    shadowColor: '#4e3ca9',
     shadowOffset: { width: 0, height: 5 },
     shadowOpacity: 0.4,
     shadowRadius: 8,
     elevation: 7,
+    marginTop: 10,
   },
   createBtnText: {
     color: '#fff',

@@ -11,7 +11,7 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import axios from 'axios';
-import EditClient from './EditClient'; // también como default export
+import EditClient from './EditClient';
 
 export default function ListClient({ navigation }) {
   const [clients, setClients] = useState([]);
@@ -81,6 +81,7 @@ export default function ListClient({ navigation }) {
       <TextInput
         style={styles.input}
         placeholder="Buscar clientes..."
+        placeholderTextColor="#b3b3ff"
         value={parameter}
         onChangeText={setParameter}
       />
@@ -98,7 +99,7 @@ export default function ListClient({ navigation }) {
       </View>
 
       {loading ? (
-        <ActivityIndicator size="large" color="#e83e8c" />
+        <ActivityIndicator size="large" color="#5e60ce" />
       ) : (
         <ScrollView style={styles.listContainer}>
           {clients.map((client, index) => (
@@ -154,25 +155,25 @@ export default function ListClient({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 16, backgroundColor: '#fff0f6' },
-  title: { fontSize: 24, fontWeight: 'bold', marginBottom: 16, color: '#d6336c', textAlign: 'center' },
-  createButton: { backgroundColor: '#e83e8c', padding: 12, borderRadius: 8, marginBottom: 16 },
+  container: { flex: 1, padding: 16, backgroundColor: '#f0f4ff' },
+  title: { fontSize: 24, fontWeight: 'bold', marginBottom: 16, color: '#4e3ca9', textAlign: 'center' },
+  createButton: { backgroundColor: '#5e60ce', padding: 12, borderRadius: 8, marginBottom: 16 },
   buttonText: { color: 'white', fontWeight: 'bold', textAlign: 'center' },
-  input: { borderWidth: 1, borderColor: '#d6336c', borderRadius: 8, padding: 10, marginBottom: 16, backgroundColor: 'white' },
+  input: { borderWidth: 1, borderColor: '#8d84f2', borderRadius: 8, padding: 10, marginBottom: 16, backgroundColor: 'white', color: '#2d2675' },
   searchButtons: { flexDirection: 'row', justifyContent: 'space-around', marginBottom: 16 },
-  searchButton: { backgroundColor: '#d6336c', padding: 10, borderRadius: 8, flex: 1, marginHorizontal: 5 },
-  resetButton: { backgroundColor: '#ffc107', padding: 10, borderRadius: 8, flex: 1, marginHorizontal: 5 },
+  searchButton: { backgroundColor: '#5e60ce', padding: 10, borderRadius: 8, flex: 1, marginHorizontal: 5 },
+  resetButton: { backgroundColor: '#9b59b6', padding: 10, borderRadius: 8, flex: 1, marginHorizontal: 5 },
   listContainer: { flex: 1 },
-  clientRow: { flexDirection: 'row', padding: 10, backgroundColor: '#fff', marginBottom: 10, borderRadius: 10, alignItems: 'center' },
-  clientIndex: { fontWeight: 'bold', color: '#d6336c', marginRight: 8, width: 24 },
+  clientRow: { flexDirection: 'row', padding: 10, backgroundColor: '#ffffff', marginBottom: 10, borderRadius: 10, alignItems: 'center', elevation: 3 },
+  clientIndex: { fontWeight: 'bold', color: '#5e60ce', marginRight: 8, width: 24 },
   clientInfo: { flex: 1 },
-  clientName: { fontWeight: 'bold', fontSize: 16, color: '#343a40' },
-  clientPhone: { color: '#6c757d' },
-  clientAddress: { color: '#6c757d' },
-  clientDate: { color: '#adb5bd', fontSize: 12 },
+  clientName: { fontWeight: 'bold', fontSize: 16, color: '#4e3ca9' },
+  clientPhone: { color: '#6c63ff' },
+  clientAddress: { color: '#6c63ff' },
+  clientDate: { color: '#b3b3ff', fontSize: 12 },
   clientActions: { flexDirection: 'row' },
-  editButton: { backgroundColor: '#007bff', paddingVertical: 6, paddingHorizontal: 10, borderRadius: 6, marginRight: 6 },
-  deleteButton: { backgroundColor: '#dc3545', paddingVertical: 6, paddingHorizontal: 10, borderRadius: 6 },
-  modalContent: { flex: 1, padding: 20, backgroundColor: 'white' },
-  closeButton: { backgroundColor: '#6c757d', padding: 10, borderRadius: 8, marginBottom: 10 },
+  editButton: { backgroundColor: '#5e60ce', paddingVertical: 6, paddingHorizontal: 10, borderRadius: 6, marginRight: 6 },
+  deleteButton: { backgroundColor: '#9b59b6', paddingVertical: 6, paddingHorizontal: 10, borderRadius: 6 },
+  modalContent: { flex: 1, padding: 20, backgroundColor: '#f0f4ff' },
+  closeButton: { backgroundColor: '#4e3ca9', padding: 10, borderRadius: 8, marginBottom: 10 },
 });

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Alert, Button, StyleSheet, Text, TextInput, View, ActivityIndicator } from 'react-native';
+import { Alert, StyleSheet, Text, TextInput, View, ActivityIndicator, TouchableOpacity } from 'react-native';
 import axios from 'axios';
 
-export default function EditGarmentView ({ garment, onClose, onReload })  {
+export default function EditGarmentView({ garment, onClose, onReload }) {
   const [data, setData] = useState({ type: '', description: '' });
   const [loading, setLoading] = useState(false);
 
@@ -47,7 +47,7 @@ export default function EditGarmentView ({ garment, onClose, onReload })  {
       <TextInput
         style={styles.input}
         placeholder="Ej. Camisa"
-        placeholderTextColor="#b377aa"
+        placeholderTextColor="#b3b3ff"
         value={data.type}
         onChangeText={(text) => onChange('type', text)}
       />
@@ -56,56 +56,74 @@ export default function EditGarmentView ({ garment, onClose, onReload })  {
       <TextInput
         style={styles.input}
         placeholder="Ej. Camisa de algodón"
-        placeholderTextColor="#b377aa"
+        placeholderTextColor="#b3b3ff"
         value={data.description}
         onChangeText={(text) => onChange('description', text)}
       />
 
       {loading ? (
-        <ActivityIndicator size="large" color="#d6336c" style={{ marginTop: 10 }} />
+        <ActivityIndicator size="large" color="#5e60ce" style={{ marginTop: 20 }} />
       ) : (
         <>
-          <View style={styles.buttonContainer}>
-            <Button title="Actualizar" onPress={submit} color="#d6336c" />
-          </View>
-          <View style={styles.buttonContainer}>
-            <Button title="Cancelar" onPress={onClose} color="#a83263" />
-          </View>
+          <TouchableOpacity style={styles.button} onPress={submit}>
+            <Text style={styles.buttonText}>Actualizar</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={[styles.button, styles.cancelButton]} onPress={onClose}>
+            <Text style={styles.buttonText}>Cancelar</Text>
+          </TouchableOpacity>
         </>
       )}
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: { 
-    padding: 20, 
+    padding: 25, 
     marginTop: 40, 
-    backgroundColor: '#fff0f6',
+    backgroundColor: '#e0e0ff',
     flex: 1,
   },
   title: { 
-    fontSize: 22, 
+    fontSize: 24, 
     marginBottom: 20, 
     textAlign: 'center', 
     fontWeight: 'bold',
-    color: '#a83263',
+    color: '#5e60ce',
   },
   label: {
     fontWeight: '600',
-    color: '#6e1843',
+    color: '#4e3ca9',
     marginBottom: 6,
+    fontSize: 16,
   },
   input: { 
     borderWidth: 1, 
-    borderColor: '#eaa4c7', 
-    padding: 10, 
+    borderColor: '#a3a0ff', 
+    padding: 12, 
     marginBottom: 15, 
-    borderRadius: 8, 
-    color: '#5a1a3b',
-    backgroundColor: '#fff5f9',
+    borderRadius: 10, 
+    color: '#4e3ca9',
+    backgroundColor: '#f0f0ff',
   },
-  buttonContainer: {
-    marginTop: 10,
+  button: {
+    backgroundColor: '#5e60ce',
+    paddingVertical: 15,
+    borderRadius: 12,
+    marginTop: 15,
+    shadowColor: '#4e3ca9',
+    shadowOffset: { width: 0, height: 5 },
+    shadowOpacity: 0.4,
+    shadowRadius: 7,
+    elevation: 6,
+  },
+  cancelButton: {
+    backgroundColor: '#6c63ff',
+  },
+  buttonText: {
+    color: '#fff',
+    fontWeight: '700',
+    fontSize: 18,
+    textAlign: 'center',
   },
 });

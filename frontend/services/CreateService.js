@@ -84,42 +84,42 @@ export default function CreateService  ()  {
 const styles = StyleSheet.create({
   container: {
     padding: 20,
-    backgroundColor: '#fff0f6',
+    backgroundColor: '#E0E0FF', // azul muy suave
     flex: 1,
   },
   title: {
     fontSize: 22,
     fontWeight: 'bold',
-    color: '#d6336c',
+    color: '#5E60CE', // morado
     marginBottom: 20,
     textAlign: 'center',
   },
   label: {
-    color: '#b43b68',
+    color: '#4E3CA9', // morado más oscuro
     marginBottom: 5,
     fontWeight: '600',
   },
   input: {
     borderWidth: 1,
-    borderColor: '#f783ac',
-    backgroundColor: '#ffe5f0',
+    borderColor: '#7C7CFF', // azul morado
+    backgroundColor: '#DDE0FF', // azul claro
     padding: 10,
     borderRadius: 8,
     marginBottom: 15,
-    color: '#6f084e',
+    color: '#002B75', // azul oscuro
   },
   button: {
-    backgroundColor: '#d6336c',
+    backgroundColor: '#5E60CE', // morado principal
     padding: 15,
     borderRadius: 10,
     alignItems: 'center',
     marginTop: 10,
   },
   backButton: {
-    backgroundColor: '#b43b68',
+    backgroundColor: '#4E3CA9', // morado secundario
   },
   buttonText: {
     color: '#fff',
     fontWeight: 'bold',
   },
-})
+});

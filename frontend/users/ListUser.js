@@ -151,17 +151,17 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#fff0f6',
+    backgroundColor: '#E0E0FF', // azul claro
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#d6336c',
+    color: '#5E60CE', // morado principal
     textAlign: 'center',
     marginBottom: 15,
   },
   createBtn: {
-    backgroundColor: '#ff85c0',
+    backgroundColor: '#7C7CFF', // azul-morado
     paddingVertical: 10,
     borderRadius: 8,
     marginBottom: 15,
@@ -174,7 +174,7 @@ const styles = StyleSheet.create({
   },
   userRow: {
     flexDirection: 'row',
-    backgroundColor: '#ffe6f0',
+    backgroundColor: '#DDE0FF', // azul suave
     paddingVertical: 10,
     paddingHorizontal: 5,
     marginBottom: 4,
@@ -182,18 +182,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   headerRow: {
-    backgroundColor: '#ffb3d9',
+    backgroundColor: '#B1B4FF', // azul pastel
   },
   cell: {
     flex: 1,
-    color: '#b83280',
+    color: '#3B3CA9', // azul oscuro
     fontSize: 14,
     paddingHorizontal: 4,
   },
   headerCell: {
     flex: 1,
     fontWeight: 'bold',
-    color: '#800040',
+    color: '#5E60CE', // morado principal
     fontSize: 15,
     paddingHorizontal: 4,
   },
@@ -211,10 +211,10 @@ const styles = StyleSheet.create({
     borderRadius: 6,
   },
   editBtn: {
-    backgroundColor: '#ff66b2',
+    backgroundColor: '#7C7CFF', // azul-morado
   },
   deleteBtn: {
-    backgroundColor: '#d90429',
+    backgroundColor: '#5E60CE', // morado oscuro
   },
   btnText: {
     color: 'white',
@@ -222,20 +222,20 @@ const styles = StyleSheet.create({
   },
   modalContainer: {
     flex: 1,
-    backgroundColor: '#fff0f6',
+    backgroundColor: '#E0E0FF',
     padding: 20,
     justifyContent: 'center',
   },
   modalTitle: {
     fontSize: 22,
     fontWeight: 'bold',
-    color: '#d6336c',
+    color: '#5E60CE',
     marginBottom: 20,
     textAlign: 'center',
   },
   closeBtn: {
     marginTop: 20,
-    backgroundColor: '#ff85c0',
+    backgroundColor: '#7C7CFF',
     paddingVertical: 12,
     borderRadius: 8,
     alignItems: 'center',

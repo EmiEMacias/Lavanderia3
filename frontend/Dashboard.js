@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, ActivityIndicator, ScrollView } from 'react-native';
 import axios from 'axios';
 import { useNavigation } from '@react-navigation/native';
-import OrderTable  from './components/OrderTable';
+import OrderTable from './components/OrderTable';
 
 export default function Dashboard() {
   const navigation = useNavigation();
@@ -47,8 +47,8 @@ export default function Dashboard() {
   if (loading) {
     return (
       <View style={styles.center}>
-        <ActivityIndicator size="large" color="#0000ff" />
-        <Text>Cargando información...</Text>
+        <ActivityIndicator size="large" color="#6a0dad" />
+        <Text style={{ color: '#6a0dad', fontSize: 16 }}>Cargando información...</Text>
       </View>
     );
   }
@@ -58,27 +58,43 @@ export default function Dashboard() {
 
       <Text style={styles.title}>Lavandería</Text>
 
+      {/* Menú de navegación */}
+      <View style={styles.menu}>
+        <TouchableOpacity style={styles.menuButton} onPress={() => navigation.navigate("ListClient")}>
+          <Text style={styles.menuText}>Clientes</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.menuButton} onPress={() => navigation.navigate("ListGarments")}>
+          <Text style={styles.menuText}>Prendas</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.menuButton} onPress={() => navigation.navigate("ListService")}>
+          <Text style={styles.menuText}>Servicios</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.menuButton} onPress={() => navigation.navigate("ListUser")}>
+          <Text style={styles.menuText}>Usuarios</Text>
+        </TouchableOpacity>
+      </View>
+
       {/* Conteo por unidad */}
       <View style={styles.card}>
         <Text style={styles.subtitle}>Conteo por unidad</Text>
         <View style={styles.row}>
           <TouchableOpacity style={styles.col} onPress={() => navigation.navigate("Prendas")}>
-            <Text>Número Prendas</Text>
-            <Text>{counting?.quantity_garments}</Text>
+            <Text style={styles.colTitle}>Número Prendas</Text>
+            <Text style={styles.colNumber}>{counting?.quantity_garments}</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.col} onPress={() => navigation.navigate("Servicios")}>
-            <Text>Número de Servicio</Text>
-            <Text>{counting?.quantity_services}</Text>
+            <Text style={styles.colTitle}>Número de Servicio</Text>
+            <Text style={styles.colNumber}>{counting?.quantity_services}</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.row}>
           <TouchableOpacity style={styles.col} onPress={() => navigation.navigate("Clientes")}>
-            <Text>Número de Clientes</Text>
-            <Text>{counting?.quantity_clients}</Text>
+            <Text style={styles.colTitle}>Número de Clientes</Text>
+            <Text style={styles.colNumber}>{counting?.quantity_clients}</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.col} onPress={() => navigation.navigate("Usuarios")}>
-            <Text>Número de Usuarios</Text>
-            <Text>{counting?.quantity_users}</Text>
+            <Text style={styles.colTitle}>Número de Usuarios</Text>
+            <Text style={styles.colNumber}>{counting?.quantity_users}</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -103,13 +119,93 @@ export default function Dashboard() {
 }
 
 const styles = StyleSheet.create({
-  container: { padding: 10, backgroundColor: '#f9f9f9' },
-  title: { fontSize: 22, fontWeight: 'bold', marginBottom: 10 },
-  subtitle: { fontSize: 18, fontWeight: '600', marginBottom: 10 },
-  card: { backgroundColor: '#fff', padding: 15, marginBottom: 15, borderRadius: 10, elevation: 3 },
-  row: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: 10 },
-  col: { flex: 1, alignItems: 'center', padding: 10, backgroundColor: '#eee', margin: 5, borderRadius: 8 },
-  button: { backgroundColor: '#007bff', padding: 15, borderRadius: 8, alignItems: 'center', marginBottom: 15 },
-  buttonText: { color: '#fff', fontSize: 16, fontWeight: 'bold' },
-  center: { flex: 1, justifyContent: 'center', alignItems: 'center', paddingTop: 100 }
+  container: { 
+    padding: 15, 
+    backgroundColor: '#f4f4fb' 
+  },
+  title: { 
+    fontSize: 26, 
+    fontWeight: 'bold', 
+    marginBottom: 15, 
+    color: '#4b0082', 
+    textAlign: 'center' 
+  },
+  subtitle: { 
+    fontSize: 20, 
+    fontWeight: '600', 
+    marginBottom: 12, 
+    color: '#6a0dad' 
+  },
+  card: { 
+    backgroundColor: '#fff', 
+    padding: 15, 
+    marginBottom: 20, 
+    borderRadius: 12, 
+    shadowColor: '#000', 
+    shadowOpacity: 0.1, 
+    shadowOffset: { width: 0, height: 2 }, 
+    shadowRadius: 5, 
+    elevation: 4 
+  },
+  row: { 
+    flexDirection: 'row', 
+    justifyContent: 'space-between', 
+    marginBottom: 10 
+  },
+  col: { 
+    flex: 1, 
+    alignItems: 'center', 
+    padding: 12, 
+    backgroundColor: '#e6e6fa', 
+    margin: 5, 
+    borderRadius: 8 
+  },
+  colTitle: { 
+    fontSize: 14, 
+    color: '#4b0082', 
+    fontWeight: '600' 
+  },
+  colNumber: { 
+    fontSize: 18, 
+    fontWeight: 'bold', 
+    color: '#6a0dad', 
+    marginTop: 5 
+  },
+  button: { 
+    backgroundColor: '#4b0082', 
+    padding: 15, 
+    borderRadius: 8, 
+    alignItems: 'center', 
+    marginBottom: 20 
+  },
+  buttonText: { 
+    color: '#fff', 
+    fontSize: 16, 
+    fontWeight: 'bold' 
+  },
+  center: { 
+    flex: 1, 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    paddingTop: 100, 
+    backgroundColor: '#f4f4fb' 
+  },
+  menu: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    marginBottom: 20,
+  },
+  menuButton: {
+    backgroundColor: '#6a0dad',
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+    borderRadius: 8,
+    margin: 5,
+    elevation: 3
+  },
+  menuText: {
+    color: '#fff',
+    fontWeight: 'bold',
+  },
 });

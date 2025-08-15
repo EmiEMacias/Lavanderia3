@@ -33,32 +33,32 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
-
-        <Stack.Screen name="Dashboard" component={Dashboard} />
+      <Stack.Navigator screenOptions={{ headerShown: true }}>
+        
+        <Stack.Screen name="Dashboard" component={Dashboard} options={{ title: "Menú Principal" }} />
 
         {/* Clients */}
-        <Stack.Screen name="CreateClient" component={CreateClient} />
-        <Stack.Screen name="ListClient" component={ListClient} />
-        <Stack.Screen name="EditClient" component={EditClient} />
+        <Stack.Screen name="CreateClient" component={CreateClient} options={{ title: "Crear Cliente" }} />
+        <Stack.Screen name="ListClient" component={ListClient} options={{ title: "Lista de Clientes" }} />
+        <Stack.Screen name="EditClient" component={EditClient} options={{ title: "Editar Cliente" }} />
 
         {/* Garments */}
-        <Stack.Screen name="CreateGarment" component={CreateGarmentView} />
-        <Stack.Screen name="ListGarments" component={ListGarments} />
-        <Stack.Screen name="EditGarment" component={EditGarment} />
+        <Stack.Screen name="CreateGarment" component={CreateGarmentView} options={{ title: "Crear Prenda" }} />
+        <Stack.Screen name="ListGarments" component={ListGarments} options={{ title: "Lista de Prendas" }} />
+        <Stack.Screen name="EditGarment" component={EditGarment} options={{ title: "Editar Prenda" }} />
 
         {/* Orders */}
-        <Stack.Screen name="CreateOrder" component={CreateOrder} />
-        <Stack.Screen name="OrderTable" component={OrderTable} />
+        <Stack.Screen name="CreateOrder" component={CreateOrder} options={{ title: "Crear Orden" }} />
+        <Stack.Screen name="OrderTable" component={OrderTable} options={{ title: "Lista de Órdenes" }} />
 
         {/* Services */}
-        <Stack.Screen name="CreateService" component={CreateService} />
-        <Stack.Screen name="ListService" component={ListService} />
+        <Stack.Screen name="CreateService" component={CreateService} options={{ title: "Crear Servicio" }} />
+        <Stack.Screen name="ListService" component={ListService} options={{ title: "Lista de Servicios" }} />
 
         {/* Users */}
-        <Stack.Screen name="CreateUser" component={CreateUser} />
-        <Stack.Screen name="ListUser" component={ListUser} />
-        <Stack.Screen name="EditUser" component={EditUser} />
+        <Stack.Screen name="CreateUser" component={CreateUser} options={{ title: "Crear Usuario" }} />
+        <Stack.Screen name="ListUser" component={ListUser} options={{ title: "Lista de Usuarios" }} />
+        <Stack.Screen name="EditUser" component={EditUser} options={{ title: "Editar Usuario" }} />
 
       </Stack.Navigator>
     </NavigationContainer>
